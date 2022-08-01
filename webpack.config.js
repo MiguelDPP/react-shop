@@ -44,7 +44,7 @@ module.exports = {
             {
                 test: /\.(s[ac]ss|css)$/i,
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
                 ]
@@ -61,7 +61,7 @@ module.exports = {
             filename: './index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './[name].css'
+            filename: '[name].css'
         })
     ],
     devServer: {
