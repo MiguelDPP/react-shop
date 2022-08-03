@@ -2,9 +2,9 @@
 
 .MyOrder {
 	width: 360px;
+	position: fixed;
 	padding: 24px;
 	box-sizing: border-box;
-	position: absolute;
 	right: 0;
 	background-color: white;
 	top: 60px;
@@ -12,7 +12,12 @@
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 	animation: entryWidth .5s ease;
+	height: auto !important;
 	overflow-y: scroll;
+}
+.contentMyOrder {
+	width: 100%;
+	// position: relative;
 }
 .title-container {
 	display: flex;
@@ -25,6 +30,10 @@
 	font-size: var(--lg);
 	font-weight: bold;
 }
+
+// .my-order-content {
+	
+// }
 .order {
 	display: grid;
 	grid-template-columns: auto 1fr;

@@ -13,23 +13,27 @@ const MyOrder = () => {
 	}
 	return (
 		<aside className="MyOrder">
-			<div className="title-container">
-				<img src={arrow} alt="arrow" />
-				<p className="title">My order</p>
-			</div>
-			<div className="my-order-content">
-				{state.cart.map((product, index) => (
-					<OrderItem product={product} indexValue={index} key={`orderItem-${index}`}/>
-				))}
-				<div className="order">
-					<p>
-						<span>Total</span>
-					</p>
-					<p>${sumTotal()}</p>
+			<div className='contentMyOrder'>
+				<div className="title-container">
+					<img src={arrow} alt="arrow" />
+					<p className="title">My order</p>
 				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
+				<div className="my-order-content">
+					{state.cart.map((product, index) => (
+						<OrderItem product={product} indexValue={index} key={`orderItem-${index}`}/>
+					))}
+				</div>
+				<div className='contentOrder'>
+					<div className="order">
+						<p>
+							<span>Total</span>
+						</p>
+						<p>${sumTotal()}</p>
+					</div>
+					<button className="primary-button">
+						Checkout
+					</button>
+				</div>
 			</div>
 		</aside>
 	);
